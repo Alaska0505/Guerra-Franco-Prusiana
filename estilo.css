@@ -1,0 +1,193 @@
+body{
+    background: rgb(243, 207, 47);
+color:black;
+font-family:Arial, Helvetica, sans-serif ;
+
+}
+header{
+    background-color: black;
+    color:rgb(252, 251, 251);
+    text-align: center;
+    font-family: Algerian;
+}
+.franja-blanca{
+    background-color: white;
+    color:black;
+}
+.franja-negra{
+background-color: black;
+color: white;
+padding: 10PX;
+}
+
+    .lista{
+      display: flex; 
+      justify-content: center; 
+      list-style: none; 
+      padding: 20PX; 
+    }
+    .lista li {
+      display: inline-block;
+      margin-right: 10px; 
+    }
+   a {
+  color: rgb(7, 7, 7);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(27, 17, 175);
+}
+
+.main{
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    font-family: Verdana;
+    font-size:20px ;
+}
+:root {
+    --cell-width: 150px; 
+    --cell-height: 300px; 
+    --cell-count: 8; 
+    --rotation-time: 40s; 
+}
+.scene {
+      
+    align-items: center;
+    width: var(--cell-width);
+    height: var(--cell-height);
+    perspective: 2000px; 
+}
+.carousel {
+      
+     
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d; 
+    animation: rotateCarousel var(--rotation-time) infinite linear; 
+}
+
+@keyframes rotateCarousel {
+    from {
+        transform: translateZ(-350px) rotateY(0deg); 
+    }
+    to {
+        transform: translateZ(-350px) rotateY(360deg);
+    }
+}
+
+.carousel:hover {
+    animation-play-state: paused;
+}
+.carousel__cell {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--cell-width);
+    height: var(--cell-height);
+    overflow: hidden;
+}
+.carousel__cell img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.carousel__cell:nth-child(1) { transform: rotateY(  0deg) translateZ(180px); }
+.carousel__cell:nth-child(2) { transform: rotateY( 45deg) translateZ(180px); }
+.carousel__cell:nth-child(3) { transform: rotateY( 90deg) translateZ(180px); }
+.carousel__cell:nth-child(4) { transform: rotateY(135deg) translateZ(180px); }
+.carousel__cell:nth-child(5) { transform: rotateY(180deg) translateZ(180px); }
+.carousel__cell:nth-child(6) { transform: rotateY(225deg) translateZ(180px); }
+.carousel__cell:nth-child(7) { transform: rotateY(270deg) translateZ(180px); }
+.carousel__cell:nth-child(8) { transform: rotateY(315deg) translateZ(180px); }
+
+.contact-form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+.contact-form div {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block; 
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    resize: vertical; 
+}
+
+.contact-form button {
+    background-color: #5cb85c;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+.contact-form button:hover {
+    background-color: #4cae4c;
+}
+footer{
+    padding: 10px;
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    font-family: Algerian;
+    text-align: center;
+}
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+
+}
+
+.producto {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 150px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.producto img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.producto h3 {
+  font-size: 1em;
+  margin: 1px 0;
+}
+label {
+  text-align: left;
+  font-weight: bold;
+}
